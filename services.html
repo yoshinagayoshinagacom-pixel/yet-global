@@ -173,26 +173,31 @@ function toggleLang() { document.body.classList.toggle('en'); }
   var progress = timeline.querySelector('.timeline-progress');
   var steps = Array.prototype.slice.call(timeline.querySelectorAll('.timeline-step'));
   var dots = steps.map(function(s) { return s.querySelector('.timeline-dot'); });
-  var lineStart = 8;
+
+  function getDotCenter(dot) {
+    var dotRect = dot.getBoundingClientRect();
+    var timelineRect = timeline.getBoundingClientRect();
+    return dotRect.top + dotRect.height / 2 - timelineRect.top;
+  }
 
   function update() {
     var trigger = window.innerHeight * 0.65;
     var lastActiveIndex = -1;
 
-    steps.forEach(function(step, i) {
+    for (var i = 0; i < steps.length; i++) {
       var dotRect = dots[i].getBoundingClientRect();
-      if (dotRect.top + dotRect.height / 2 < trigger) {
-        step.classList.add('active');
+      var dotMiddle = dotRect.top + dotRect.height / 2;
+      if (dotMiddle < trigger) {
+        steps[i].classList.add('active');
         lastActiveIndex = i;
       } else {
-        step.classList.remove('active');
+        steps[i].classList.remove('active');
       }
-    });
+    }
 
     if (lastActiveIndex >= 0) {
-      var dotOffsetTop = dots[lastActiveIndex].offsetTop + dots[lastActiveIndex].offsetHeight / 2;
-      var fillHeight = dotOffsetTop - lineStart;
-      progress.style.height = Math.max(0, fillHeight) + 'px';
+      var fillTo = getDotCenter(dots[lastActiveIndex]);
+      progress.style.height = Math.max(0, fillTo - 8) + 'px';
     } else {
       progress.style.height = '0px';
     }
