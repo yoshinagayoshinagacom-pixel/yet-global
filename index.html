@@ -165,7 +165,7 @@ document.querySelectorAll('[data-parallax]').forEach(function(el) {
   window.addEventListener('scroll', function() {
     var rect = el.getBoundingClientRect();
     var speed = 0.3;
-    var offset = (rect.top) * speed;
+    var offset = Math.min(0, (rect.top) * speed);
     img.style.transform = 'translateY(' + offset + 'px)';
   }, { passive: true });
 });
