@@ -63,6 +63,8 @@ body.en [data-lang-inline="ja"] { display: none; }
   left: 0;
   right: 0;
   z-index: 100;
+  height: 72px;
+  overflow: hidden;
   background: var(--navy);
   border-bottom: none;
 }
