@@ -80,7 +80,7 @@ body.en [data-lang-inline="ja"] { display: none; }
   flex-direction: column;
   gap: 0;
   text-decoration: none;
-  padding: 4px 0;
+  padding: 0;
 }
 .logo-text {
   font-family: var(--font-en);
