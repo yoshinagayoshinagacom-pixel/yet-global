@@ -375,6 +375,16 @@ body.en [data-lang-inline="ja"] { display: none; }
   width: 1px;
   background: var(--border);
 }
+.timeline-progress {
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  width: 1px;
+  height: 0;
+  background: var(--crimson);
+  z-index: 1;
+  transition: height 0.1s linear;
+}
 .timeline-step {
   position: relative;
   padding-bottom: 56px;
@@ -388,10 +398,13 @@ body.en [data-lang-inline="ja"] { display: none; }
   top: 4px;
   width: 12px;
   height: 12px;
-  border: 2px solid var(--crimson);
+  border: 2px solid var(--border);
   background: var(--white);
+  z-index: 2;
+  transition: border-color 0.3s, background 0.3s;
 }
-.timeline-step:first-child .timeline-dot {
+.timeline-step.active .timeline-dot {
+  border-color: var(--crimson);
   background: var(--crimson);
 }
 .step-number {
