@@ -185,8 +185,8 @@ body.en [data-lang-inline="ja"] { display: none; }
 
 /* ─── Page Header (non-home pages) ─── */
 .page-header {
-  padding-top: 140px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
 }
