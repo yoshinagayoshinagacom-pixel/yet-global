@@ -67,6 +67,7 @@ body.en [data-lang-inline="ja"] { display: none; }
   overflow: hidden;
   background: var(--navy);
   border-bottom: none;
+  box-shadow: 0 1px 0 0 var(--navy);
 }
 .header-inner {
   max-width: 1080px;
