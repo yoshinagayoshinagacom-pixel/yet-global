@@ -40,10 +40,10 @@ body {
 }
 .section-label {
   font-family: var(--font-en);
-  font-size: 11px;
-  letter-spacing: 3px;
+  font-size: 14px;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  color: var(--silver);
+  color: var(--navy);
   margin-bottom: 48px;
 }
 
@@ -188,7 +188,7 @@ body.en [data-lang-inline="ja"] { display: none; }
   padding-top: 40px;
   padding-bottom: 40px;
   background: var(--bg);
-  border-bottom: 1px solid var(--border);
+  border-bottom: none;
 }
 .page-header h1 {
   font-size: 32px;
@@ -351,6 +351,7 @@ body.en [data-lang-inline="ja"] { display: none; }
 /* ─── Process (Timeline) ─── */
 .process-section {
   background: var(--white);
+  padding-top: 60px;
 }
 .process-intro {
   font-size: 16px;
@@ -395,9 +396,9 @@ body.en [data-lang-inline="ja"] { display: none; }
 }
 .step-number {
   font-family: var(--font-en);
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 2px;
-  color: var(--silver);
+  color: var(--navy);
   margin-bottom: 8px;
 }
 .step-title {
