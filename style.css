@@ -383,7 +383,6 @@ body.en [data-lang-inline="ja"] { display: none; }
   height: 0;
   background: var(--crimson);
   z-index: 1;
-  transition: height 0.1s linear;
 }
 .timeline-step {
   position: relative;

@@ -171,28 +171,28 @@ function toggleLang() { document.body.classList.toggle('en'); }
   var timeline = document.querySelector('.timeline');
   if (!timeline) return;
   var progress = timeline.querySelector('.timeline-progress');
-  var steps = timeline.querySelectorAll('.timeline-step');
-  var trigger = window.innerHeight * 0.6;
+  var steps = Array.prototype.slice.call(timeline.querySelectorAll('.timeline-step'));
+  var dots = steps.map(function(s) { return s.querySelector('.timeline-dot'); });
+  var lineStart = 8;
 
   function update() {
-    var timelineRect = timeline.getBoundingClientRect();
-    var timelineTop = timelineRect.top + 8;
-    var timelineHeight = timelineRect.height - 16;
+    var trigger = window.innerHeight * 0.65;
+    var lastActiveIndex = -1;
 
-    steps.forEach(function(step) {
-      var dotTop = step.querySelector('.timeline-dot').getBoundingClientRect().top;
-      if (dotTop < trigger) {
+    steps.forEach(function(step, i) {
+      var dotRect = dots[i].getBoundingClientRect();
+      if (dotRect.top + dotRect.height / 2 < trigger) {
         step.classList.add('active');
+        lastActiveIndex = i;
       } else {
         step.classList.remove('active');
       }
     });
 
-    var lastActive = timeline.querySelector('.timeline-step.active:last-of-type');
-    if (lastActive) {
-      var lastDot = lastActive.querySelector('.timeline-dot');
-      var fillHeight = lastDot.getBoundingClientRect().top - timelineTop + 6;
-      progress.style.height = Math.max(0, Math.min(fillHeight, timelineHeight)) + 'px';
+    if (lastActiveIndex >= 0) {
+      var dotOffsetTop = dots[lastActiveIndex].offsetTop + dots[lastActiveIndex].offsetHeight / 2;
+      var fillHeight = dotOffsetTop - lineStart;
+      progress.style.height = Math.max(0, fillHeight) + 'px';
     } else {
       progress.style.height = '0px';
     }
