@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ - YET Global Consulting</title>
+<meta name="description" content="SM Mallsへの出店にご関心をお持ちの企業様は、お気軽にお問い合わせください。">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-bar">
+        <div style="background:var(--flag-blue);"></div>
+        <div style="background:var(--flag-red);"></div>
+      </div>
+      <span class="logo-text">YET</span>
+      <span class="logo-sub">
+        <span data-lang-inline="ja">グローバルコンサルティング</span>
+        <span data-lang-inline="en">GLOBAL CONSULTING</span>
+      </span>
+      <div class="logo-bar">
+        <div style="background:var(--flag-blue);"></div>
+        <div style="background:var(--flag-red);"></div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="index.html">
+        <span data-lang-inline="ja">ホーム</span>
+        <span data-lang-inline="en">Home</span>
+      </a>
+      <a href="services.html">
+        <span data-lang-inline="ja">サービス</span>
+        <span data-lang-inline="en">Services</span>
+      </a>
+      <a href="about.html">
+        <span data-lang-inline="ja">私たちについて</span>
+        <span data-lang-inline="en">About</span>
+      </a>
+      <a href="contact.html" class="active">
+        <span data-lang-inline="ja">お問い合わせ</span>
+        <span data-lang-inline="en">Contact</span>
+      </a>
+      <button class="lang-toggle" onclick="toggleLang()">EN / JA</button>
+    </nav>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="container">
+    <div data-lang="ja">
+      <h1>お問い合わせ</h1>
+      <p>SM Mallsへの出店にご関心をお持ちの企業様は、下記よりお気軽にご連絡ください。初回のご相談は無料で承っております。</p>
+    </div>
+    <div data-lang="en">
+      <h1>Contact</h1>
+      <p>If your franchise is interested in expanding into SM Malls, please reach out below. Initial consultations are free of charge.</p>
+    </div>
+  </div>
+</div>
+
+<section class="section contact-section">
+  <div class="container">
+    <div class="contact-inner">
+      <div data-lang="ja">
+        <h2>メールでのお問い合わせ</h2>
+        <p>ご相談内容、貴社名、ご担当者名をお書き添えの上、下記メールアドレスまでお送りください。3営業日以内にご返信いたします。</p>
+      </div>
+      <div data-lang="en">
+        <h2>Reach Us by Email</h2>
+        <p>Please include details about your inquiry, your company name, and contact person. We will respond within 3 business days.</p>
+      </div>
+      <a href="mailto:contact@yet-global.com" class="contact-email">contact@yet-global.com</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-copy">&copy; 2026 YET Global Consulting</div>
+      <div class="footer-flag">
+        <div style="background:var(--flag-blue);"></div>
+        <div style="background:var(--flag-red);"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleLang() { document.body.classList.toggle('en'); }
+</script>
+</body>
+</html>
