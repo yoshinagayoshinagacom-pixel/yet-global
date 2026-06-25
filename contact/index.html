@@ -67,14 +67,47 @@
   <div class="container">
     <div class="contact-inner">
       <div data-lang="ja">
-        <h2>メールでのお問い合わせ</h2>
-        <p>ご相談内容、貴社名、ご担当者名をお書き添えの上、下記メールアドレスまでお送りください。3営業日以内にご返信いたします。</p>
+        <h2>お問い合わせフォーム</h2>
+        <p>以下のフォームにご記入の上、送信してください。3営業日以内にご返信いたします。</p>
       </div>
       <div data-lang="en">
-        <h2>Reach Us by Email</h2>
-        <p>Please include details about your inquiry, your company name, and contact person. We will respond within 3 business days.</p>
+        <h2>Contact Form</h2>
+        <p>Please fill out the form below. We will respond within 3 business days.</p>
       </div>
-      <a href="mailto:contact@yet-global.com" class="contact-email">contact@yet-global.com</a>
+      <form action="https://formspree.io/f/mbdvgjvy" method="POST" class="contact-form">
+        <div class="form-group">
+          <label data-lang="ja">お名前 <span class="required">*</span></label>
+          <label data-lang="en">Name <span class="required">*</span></label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="form-group">
+          <label data-lang="ja">会社名</label>
+          <label data-lang="en">Company</label>
+          <input type="text" name="company">
+        </div>
+        <div class="form-group">
+          <label data-lang="ja">メールアドレス <span class="required">*</span></label>
+          <label data-lang="en">Email <span class="required">*</span></label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label data-lang="ja">お問い合わせ内容 <span class="required">*</span></label>
+          <label data-lang="en">Message <span class="required">*</span></label>
+          <textarea name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          <span data-lang-inline="ja">送信する</span>
+          <span data-lang-inline="en">Send Message</span>
+        </button>
+      </form>
+      <div style="margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border);">
+        <div data-lang="ja">
+          <p style="font-size: 14px; color: var(--silver);">メールでのお問い合わせ: <a href="mailto:contact@yet-global.com" style="color: var(--crimson);">contact@yet-global.com</a></p>
+        </div>
+        <div data-lang="en">
+          <p style="font-size: 14px; color: var(--silver);">Or email us directly: <a href="mailto:contact@yet-global.com" style="color: var(--crimson);">contact@yet-global.com</a></p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
